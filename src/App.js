@@ -41,7 +41,10 @@ const app = props => {
         <h1>Hi, how are you</h1>
         {/* do not use switchNameHandler() beacuse if you add parathesis, this function will be exeuted immediately when program start */}
         <button onClick={switchNameHandler}>Switch name</button>
-        <Person name={personState.person[0].name} age={personState.person[0].age}>{personState.person[0].speed}</Person>
+        <Person name={personState.person[0].name} age={personState.person[0].age}
+            //pass a function to Person element 
+            click={switchNameHandler}
+        >{personState.person[0].speed}</Person>
         <Person name={personState.person[1].name} age={personState.person[1].age}>{personState.person[1].speed}</Person>
         <Person name={personState.person[2].name} age={personState.person[2].age}>{personState.person[2].speed}</Person>
         {/* <Person name={this.state.person[2].name} age={this.state.person[2].age}>{this.state.person[3].speed}</Person> */}

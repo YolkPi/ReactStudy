@@ -5,7 +5,8 @@ const person = (props) => {
         <div>
             <p>I'm {props.name}! I'm {props.age} years old</p>
             {/* add props.chiledn elemetns in tage <p> */}
-            <p>{props.children}</p>
+            {/* add a onClick with action=props.click */}
+            <p onClick={props.click}>{props.children}</p>
         </div>
     ) 
 };
